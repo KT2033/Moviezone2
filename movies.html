@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Movie Zone</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #121212;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #ff004f;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    .movie-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .movie {
+      background-color: #1e1e1e;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(255, 0, 79, 0.2);
+    }
+    .movie img {
+      width: 100%;
+      height: auto;
+    }
+    .movie-content {
+      padding: 15px;
+    }
+    .movie h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+    .movie p {
+      font-size: 14px;
+      color: #ccc;
+    }
+    .movie a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #ff004f;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 50px;
+      border: 2px solid #ff004f;
+      transition: background-color 0.3s;
+    }
+    .movie a:hover {
+      background-color: #ff004f;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* Hide the download options by default */
+    .download-options {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>My Movie Zone</h1>
+</header>
+
+<div class="movie-container">
+  <!-- Movie 1 -->
+  <div class="movie">
+    <img src="https://image.tmdb.org/t/p/w500/qAZ0pzat24kLdO3o8ejmbLxyOac.jpg" alt="Wonder Woman 1984">
+    <div class="movie-content">
+      <h3>Wonder Woman 1984</h3>
+      <p>Diana Prince fights the Soviet Union in the 1980s Cold War era.</p>
+      <a href="#" onclick="toggleWatchOption(1)">Watch</a>
+      <div id="watch-option-1" class="download-options">
+        <a href="https://archive.org/download/Wonder-Woman-1984-Movie/Wonder-Woman-1984.mp4" target="_blank">Watch Online</a>
+      </div>
+      <a href="#" onclick="toggleDownloadOption(1)">Download</a>
+      <div id="download-option-1" class="download-options">
+        <a href="https://archive.org/download/Wonder-Woman-1984-Movie/Wonder-Woman-1984.mp4" target="_blank">Download</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Movie 2 -->
+  <div class="movie">
+    <img src="https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg" alt="Tenet">
+    <div class="movie-content">
+      <h3>Tenet</h3>
+      <p>A secret agent embarks on a dangerous mission through time.</p>
+      <a href="#" onclick="toggleWatchOption(2)">Watch</a>
+      <div id="watch-option-2" class="download-options">
+        <a href="https://drive.google.com/uc?export=download&id=1sqFEWWpfhVFjcLHZoVq9r0mxwJIciJUd" target="_blank">Watch Online</a>
+      </div>
+      <a href="#" onclick="toggleDownloadOption(2)">Download</a>
+      <div id="download-option-2" class="download-options">
+        <a href="https://archive.org/download/Tenet-Movie/Tenet.mp4" target="_blank">Download</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Movie 3 -->
+  <div class="movie">
+    <img src="https://image.tmdb.org/t/p/w500/6KErczPBROQty7QoIsaa6wJYXZi.jpg" alt="Soul">
+    <div class="movie-content">
+      <h3>Soul</h3>
+      <p>A musician who has lost his passion for music is transported out of his body.</p>
+      <a href="#" onclick="toggleWatchOption(3)">Watch</a>
+      <div id="watch-option-3" class="download-options">
+        <a href="https://archive.org/download/Soul-2020-Movie/Soul.mp4" target="_blank">Watch Online</a>
+      </div>
+      <a href="#" onclick="toggleDownloadOption(3)">Download</a>
+      <div id="download-option-3" class="download-options">
+        <a href="https://archive.org/download/Soul-2020-Movie/Soul.mp4" target="_blank">Download</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  // Toggle watch option
+  function toggleWatchOption(movieId) {
+    var watchOption = document.getElementById('watch-option-' + movieId);
+    if (watchOption.style.display === "none" || watchOption.style.display === "") {
+      watchOption.style.display = "block";
+    } else {
+      watchOption.style.display = "none";
+    }
+  }
+
+  // Toggle download option
+  function toggleDownloadOption(movieId) {
+    var downloadOption = document.getElementById('download-option-' + movieId);
+    if (downloadOption.style.display === "none" || downloadOption.style.display === "") {
+      downloadOption.style.display = "block";
+    } else {
+      downloadOption.style.display = "none";
+    }
+  }
+</script>
+
+</body>
+</html>
