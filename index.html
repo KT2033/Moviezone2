@@ -65,7 +65,6 @@
       text-decoration: none;
     }
 
-    /* Hide the download options by default */
     .download-options {
       display: none;
     }
@@ -128,30 +127,22 @@
       </div>
     </div>
   </div>
-
 </div>
 
 <script>
-  // Toggle watch option
   function toggleWatchOption(movieId) {
     var watchOption = document.getElementById('watch-option-' + movieId);
-    if (watchOption.style.display === "none" || watchOption.style.display === "") {
-      watchOption.style.display = "block";
-    } else {
-      watchOption.style.display = "none";
-    }
+    watchOption.style.display = (watchOption.style.display === "none" || watchOption.style.display === "") ? "block" : "none";
   }
 
-  // Toggle download option
   function toggleDownloadOption(movieId) {
     var downloadOption = document.getElementById('download-option-' + movieId);
-    if (downloadOption.style.display === "none" || downloadOption.style.display === "") {
-      downloadOption.style.display = "block";
-    } else {
-      downloadOption.style.display = "none";
-    }
+    downloadOption.style.display = (downloadOption.style.display === "none" || downloadOption.style.display === "") ? "block" : "none";
   }
 </script>
+
+<!-- Ad Network Script -->
+<script type='text/javascript' src='//pl26420967.profitableratecpm.com/9c/bc/83/9cbc8335952b36bacba05ed9a6e4dea7.js'></script>
 
 </body>
 </html>
